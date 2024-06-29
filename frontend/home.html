@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrimeMap</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">CrimeMap</a>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="#home" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="report.html" class="navbar-link">Report</a></li>
+                <li class="navbar-item"><a href="#map" class="navbar-link">Map</a></li>
+                <li class="navbar-item dropdown">
+                    <a href="#user" class="navbar-link dropdown-toggle">User</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="#profile" class="dropdown-link">Profile</a></li>
+                        <li class="dropdown-item"><a href="#settings" class="dropdown-link">Settings</a></li>
+                        <li class="dropdown-item"><a href="#logout" class="dropdown-link">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <header id="home" class="header">
+        <div class="header-container">
+            <h1>Welcome to CrimeMap</h1>
+            <p>Your go-to platform for real-time crime reporting and mapping.</p>
+            <a href="report.html" class="btn">Report a Crime</a>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="features-container">
+            <h2>Features</h2>
+            <div class="feature">
+                <h3>Real-Time Reporting</h3>
+                <p>Submit crime reports with detailed information including type, location, time, and description.</p>
+            </div>
+            <div class="feature">
+                <h3>Interactive Map</h3>
+                <p>Explore an interactive map that displays crime reports with clustering and heatmaps.</p>
+            </div>
+            <div class="feature">
+                <h3>User Authentication</h3>
+                <p>Secure login for users with different access levels, including citizens, police, and admin.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h2>Crime Map</h2>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 CrimeMap. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

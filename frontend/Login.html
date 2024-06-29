@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script>
+            function signup()
+    {
+        document.querySelector(".login-form-container").style.cssText = "display: none;";
+        document.querySelector(".signup-form-container").style.cssText = "display: block;";
+        document.querySelector(".container").style.cssText = "background: linear-gradient(to bottom, rgb(56, 189, 149),  rgb(28, 139, 106));";
+        document.querySelector(".button-1").style.cssText = "display: none";
+        document.querySelector(".button-2").style.cssText = "display: block";
+
+    };
+
+    function login()
+    {
+        document.querySelector(".signup-form-container").style.cssText = "display: none;";
+        document.querySelector(".login-form-container").style.cssText = "display: block;";
+        document.querySelector(".container").style.cssText = "background: linear-gradient(to bottom, rgb(6, 108, 224),  rgb(14, 48, 122));";
+        document.querySelector(".button-2").style.cssText = "display: none";
+        document.querySelector(".button-1").style.cssText = "display: block";
+
+    }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!--Data or Content-->
+        <div class="box-1">
+            <div class="content-holder">
+                <h2>Report Crime</h2>
+                <button class="button-1" onclick="signup()">Sign up</button>
+                <button class="button-2" onclick="login()">Login</button>
+            </div>
+        </div>
+  
+        
+        <!--Forms-->
+        <div class="box-2">
+            <form action="/login" method="post">
+            <div class="login-form-container">
+                <h1>Login </h1>
+                <input type="email" placeholder="Email" class="input-field" name="email" required>
+                <br><br>
+                <input type="password" placeholder="Password" class="input-field" name="pass" required>
+                <br><br>
+                <input type="submit" class="login-button" value="Login" required>
+            </form>
+            </div>
+  
+  
+  <!--Create Container for Signup form-->
+        <div class="signup-form-container">
+            <form action="/home" method="post">
+            <h1>Sign Up</h1>
+            <input type="text" placeholder="Username" class="input-field" name="username" required>
+            <br><br>
+            <input type="email" placeholder="Email" class="input-field" name="email" required>
+            <br><br>
+            <input type="password" placeholder="Password" class="input-field" name="pass" required>
+            <br><br>
+            <input type="submit" class="signup-button" value="Signup">
+            </form>
+        </div>
+  
+  
+  
+        </div>
+</body>
+</html>
